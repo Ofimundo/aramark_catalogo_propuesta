@@ -29,7 +29,6 @@ export default function CatalogoOfimundoAramark() {
 
   // Pricing data per location, keyed by "type - format - volume"
   // Values: { cf: string (UF), cvMono: string (USD), cvColor: string (USD) }
-  // null means the combination is not available for that location
   const pricingByLocation = {
     SANTIAGO: {
       'Mono - A4 - Bajo':   { cf: '1,10', cvMono: '0,011842', cvColor: null },
@@ -56,17 +55,23 @@ export default function CatalogoOfimundoAramark() {
       'Color - A3 - Alto':  { cf: '5,65', cvMono: '0,012079', cvColor: '0,038136' },
     },
     FAENA: {
-      'Mono - A4 - Bajo':   null, // No disponible
+      'Mono - A4 - Bajo':   { cf: '1,40', cvMono: '0,013000', cvColor: null },
       'Mono - A4 - Medio':  { cf: '1,60', cvMono: '0,011331', cvColor: null },
       'Mono - A4 - Alto':   { cf: '2,60', cvMono: '0,009995', cvColor: null },
       'Mono - A3 - Medio':  { cf: '4,30', cvMono: '0,009512', cvColor: null },
       'Mono - A3 - Alto':   { cf: '5,28', cvMono: '0,007693', cvColor: null },
-      'Color - A4 - Bajo':  null, // No disponible
+      'Color - A4 - Bajo':  { cf: '2,00', cvMono: '0,024000', cvColor: '0,070000' },
       'Color - A4 - Medio': { cf: '2,25', cvMono: '0,021600', cvColor: '0,057261' },
       'Color - A4 - Alto':  { cf: '3,35', cvMono: '0,020368', cvColor: '0,051582' },
       'Color - A3 - Medio': { cf: '6,05', cvMono: '0,015584', cvColor: '0,047362' },
       'Color - A3 - Alto':  { cf: '7,04', cvMono: '0,012789', cvColor: '0,043265' },
     },
+  };
+
+  const locationColors = {
+    SANTIAGO: { bg: 'from-teal-600 to-teal-800', text: 'text-teal-700', border: 'border-teal-500', light: 'bg-teal-50', badge: 'bg-teal-600' },
+    REGION:   { bg: 'from-emerald-600 to-emerald-800', text: 'text-emerald-700', border: 'border-emerald-500', light: 'bg-emerald-50', badge: 'bg-emerald-600' },
+    FAENA:    { bg: 'from-amber-700 to-amber-900', text: 'text-amber-700', border: 'border-amber-500', light: 'bg-amber-50', badge: 'bg-amber-700' },
   };
 
   const baseCategories = [
@@ -393,7 +398,7 @@ export default function CatalogoOfimundoAramark() {
           <div className="flex justify-center mb-6">
             <div className={`inline-flex items-center gap-2 bg-gradient-to-r ${getLocationColor()} text-white px-5 py-2 rounded-full text-sm font-bold shadow-md`}>
               <MapPin className="w-4 h-4" />
-              Viendo catálogo para: {selectedLocation === 'SANTIAGO' ? 'Santiago' : selectedLocation === 'REGION' ? 'Región' : 'Faena'}
+              Viendo catálogo para: {selectedLocation === 'SANTIAGO' ? 'Santiago' : selectedLocation === 'REGION' ? 'Región' : 'Faena'} - {categories.reduce((total, cat) => total + cat.models.length, 0)} equipos disponibles
             </div>
           </div>
         )}
