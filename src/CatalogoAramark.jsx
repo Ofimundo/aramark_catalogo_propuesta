@@ -26,6 +26,7 @@ import {
   Wifi,
   Layers,
   Check,
+  Star,
 } from 'lucide-react';
 
 export default function CatalogoOfimundoAramark() {
@@ -34,27 +35,27 @@ export default function CatalogoOfimundoAramark() {
   const pricingByLocation = {
     SANTIAGO: {
       'Mono - A4 - Bajo':   { cf: '1,10', cvMono: '0,011842', cvColor: '0,000000' },
-      'Mono - A4 - Medio':  { cf: '1,25', cvMono: '0,009947', cvColor: '0,000000' },
-      'Mono - A4 - Alto':   { cf: '2,05', cvMono: '0,008526', cvColor: '0,000000' },
-      'Mono - A3 - Medio':  { cf: '2,48', cvMono: '0,008053', cvColor: '0,000000' },
-      'Mono - A3 - Alto':   { cf: '4,30', cvMono: '0,005684', cvColor: '0,000000' },
+      'Mono - A4 - Medio':  { cf: '1,30', cvMono: '0,009947', cvColor: '0,000000' },
+      'Mono - A4 - Alto':   { cf: '2,10', cvMono: '0,008526', cvColor: '0,000000' },
+      'Mono - A3 - Medio':  { cf: '2,70', cvMono: '0,008053', cvColor: '0,000000' },
+      'Mono - A3 - Alto':   { cf: '4,40', cvMono: '0,005684', cvColor: '0,000000' },
       'Color - A4 - Bajo':  { cf: '1,60', cvMono: '0,015063', cvColor: '0,062503' },
-      'Color - A4 - Medio': { cf: '1,95', cvMono: '0,019421', cvColor: '0,051530' },
+      'Color - A4 - Medio': { cf: '1,90', cvMono: '0,019421', cvColor: '0,051530' },
       'Color - A4 - Alto':  { cf: '2,40', cvMono: '0,016579', cvColor: '0,047048' },
-      'Color - A3 - Medio': { cf: '2,54', cvMono: '0,012837', cvColor: '0,033724' },
-      'Color - A3 - Alto':  { cf: '5,05', cvMono: '0,010895', cvColor: '0,027827' },
+      'Color - A3 - Medio': { cf: '3,00', cvMono: '0,012837', cvColor: '0,033724' },
+      'Color - A3 - Alto':  { cf: '5,70', cvMono: '0,010895', cvColor: '0,027827' },
     },
     REGION: {
       'Mono - A4 - Bajo':   { cf: '1,25', cvMono: '0,012268', cvColor: '0,000000' },
-      'Mono - A4 - Medio':  { cf: '1,30', cvMono: '0,010279', cvColor: '0,000000' },
-      'Mono - A4 - Alto':   { cf: '2,20', cvMono: '0,009332', cvColor: '0,000000' },
-      'Mono - A3 - Medio':  { cf: '2,58', cvMono: '0,008668', cvColor: '0,000000' },
+      'Mono - A4 - Medio':  { cf: '1,40', cvMono: '0,010279', cvColor: '0,000000' },
+      'Mono - A4 - Alto':   { cf: '2,25', cvMono: '0,009332', cvColor: '0,000000' },
+      'Mono - A3 - Medio':  { cf: '2,95', cvMono: '0,008668', cvColor: '0,000000' },
       'Mono - A3 - Alto':   { cf: '4,85', cvMono: '0,006679', cvColor: '0,000000' },
       'Color - A4 - Bajo':  { cf: '1,65', cvMono: '0,022263', cvColor: '0,068567' },
       'Color - A4 - Medio': { cf: '2,10', cvMono: '0,020274', cvColor: '0,054299' },
-      'Color - A4 - Alto':  { cf: '2,95', cvMono: '0,018028', cvColor: '0,048157' },
+      'Color - A4 - Alto':  { cf: '3,00', cvMono: '0,018028', cvColor: '0,048157' },
       'Color - A3 - Medio': { cf: '3,95', cvMono: '0,014021', cvColor: '0,041710' },
-      'Color - A3 - Alto':  { cf: '5,65', cvMono: '0,012079', cvColor: '0,038136' },
+      'Color - A3 - Alto':  { cf: '5,95', cvMono: '0,012079', cvColor: '0,038136' },
     },
     FAENA: {
       'Mono - A4 - Bajo':   { cf: '1,40', cvMono: '0,013000', cvColor: '0,000000' },
@@ -65,7 +66,7 @@ export default function CatalogoOfimundoAramark() {
       'Color - A4 - Bajo':  { cf: '2,00', cvMono: '0,024000', cvColor: '0,070000' },
       'Color - A4 - Medio': { cf: '2,25', cvMono: '0,021600', cvColor: '0,057261' },
       'Color - A4 - Alto':  { cf: '3,35', cvMono: '0,020368', cvColor: '0,051582' },
-      'Color - A3 - Medio': { cf: '6,05', cvMono: '0,015584', cvColor: '0,047362' },
+      'Color - A3 - Medio': { cf: '6,13', cvMono: '0,015584', cvColor: '0,047362' },
       'Color - A3 - Alto':  { cf: '7,04', cvMono: '0,012789', cvColor: '0,043265' },
     },
   };
@@ -525,11 +526,20 @@ export default function CatalogoOfimundoAramark() {
         {selectedLocation && (
           <div className="mb-10">
             {categories.length > 0 && (
-              <div className="flex justify-end mb-4">
+              <div className="flex justify-between items-center flex-wrap gap-4 mb-4">
                 <div className="flex gap-2 bg-slate-100 rounded-xl p-1">
                   <button onClick={expandAllCategories} className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${expandAll ? `bg-gradient-to-r ${getLocationColor()} text-white shadow-sm` : 'text-slate-600 hover:bg-white hover:text-pink-500'}`}><Maximize2 className="w-4 h-4" /> Expandir Todo</button>
                   <button onClick={collapseAllCategories} className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${!expandAll ? `bg-gradient-to-r ${getLocationColor()} text-white shadow-sm` : 'text-slate-600 hover:bg-white hover:text-pink-500'}`}><Minimize2 className="w-4 h-4" /> Minimizar Todo</button>
                 </div>
+                
+                {/* Botón de Preferencias de Equipo junto al catálogo */}
+                <button
+                  onClick={() => setShowPreferencesModal(true)}
+                  className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl font-bold hover:shadow-lg transition-all duration-200 hover:scale-105"
+                >
+                  <Star className="w-4 h-4" />
+                  ¿No encuentras lo que buscas? Preferencias de Equipo
+                </button>
               </div>
             )}
           </div>
@@ -629,26 +639,6 @@ export default function CatalogoOfimundoAramark() {
           </div>
         )}
       </section>
-
-      {/* Sección de Preferencias del Cliente */}
-      {selectedLocation && (
-        <section className="max-w-7xl mx-auto py-16 px-6">
-          <div className="bg-gradient-to-br from-pink-50 to-purple-50 border border-pink-200 rounded-3xl p-8 md:p-12 shadow-lg">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900">📋 Preferencias de Equipo</h2>
-              <p className="text-slate-600 mt-2">Cuéntanos qué características buscas y te ayudaremos a encontrar el equipo ideal</p>
-            </div>
-            
-            <button
-              onClick={() => setShowPreferencesModal(true)}
-              className="mx-auto block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              <Check className="w-5 h-5 inline mr-2" />
-              Seleccionar Preferencias
-            </button>
-          </div>
-        </section>
-      )}
 
       <section className="max-w-7xl mx-auto py-20 px-6">
         <div className="bg-gradient-to-br from-pink-500/5 via-white to-purple-600/5 border border-slate-200 rounded-[40px] p-8 md:p-16 shadow-lg relative overflow-hidden">
