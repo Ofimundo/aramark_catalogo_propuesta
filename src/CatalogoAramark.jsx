@@ -220,7 +220,7 @@ export default function CatalogoOfimundoAramark() {
         <style>
           body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f5f5f5; }
           .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-          .header { background: linear-gradient(135deg, #ec4899, #9333ea); padding: 40px; text-align: center; color: white; }
+          .header { background: linear-gradient(135deg, #2E2096, #E3314F); padding: 40px; text-align: center; color: white; }
           .header h1 { margin: 0; font-size: 28px; }
           .sector-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; margin-top: 15px; }
           .category { margin: 30px; border: 1px solid #e5e7eb; border-radius: 20px; overflow: hidden; }
@@ -304,11 +304,11 @@ export default function CatalogoOfimundoAramark() {
         <style>
           body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f5f5f5; }
           .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-          .header { background: linear-gradient(135deg, #ec4899, #9333ea); padding: 30px; text-align: center; color: white; }
+          .header { background: linear-gradient(135deg, #2E2096, #E3314F); padding: 30px; text-align: center; color: white; }
           .header h1 { margin: 0; font-size: 24px; }
           .content { padding: 30px; }
           .section { margin-bottom: 25px; border-bottom: 1px solid #e5e7eb; padding-bottom: 15px; }
-          .section-title { font-size: 18px; font-weight: bold; color: #ec4899; margin-bottom: 15px; }
+          .section-title { font-size: 18px; font-weight: bold; color: #2E2096; margin-bottom: 15px; }
           .preference-row { display: flex; justify-content: space-between; padding: 8px 0; }
           .preference-label { font-weight: bold; color: #4b5563; }
           .preference-value { color: #1f2937; }
@@ -389,10 +389,10 @@ export default function CatalogoOfimundoAramark() {
 
   const getLocationColor = () => {
     switch(selectedLocation) {
-      case 'SANTIAGO': return 'from-pink-500 to-purple-600';
-      case 'REGION': return 'from-pink-500 to-purple-600';
-      case 'FAENA': return 'from-pink-500 to-purple-600';
-      default: return 'from-pink-500 to-purple-600';
+      case 'SANTIAGO': return 'from-[#2E2096] to-[#E3314F]';
+      case 'REGION': return 'from-[#2E2096] to-[#E3314F]';
+      case 'FAENA': return 'from-[#2E2096] to-[#E3314F]';
+      default: return 'from-[#2E2096] to-[#E3314F]';
     }
   };
 
@@ -407,11 +407,11 @@ export default function CatalogoOfimundoAramark() {
 
   const PrinterIcon = ({ className }) => (
     <div className={`relative ${className}`}>
-      <div className="absolute -top-2 -right-2 w-6 h-6 bg-pink-500 rounded-full flex items-center justify-center shadow-lg">
+      <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#2E2096] rounded-full flex items-center justify-center shadow-lg">
         <Printer className="w-3 h-3 text-white" />
       </div>
-      <div className="w-full h-full bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl flex items-center justify-center shadow-inner">
-        <svg viewBox="0 0 100 100" className="w-20 h-20 text-pink-500">
+      <div className="w-full h-full bg-gradient-to-br from-[#2E2096]/10 to-[#E3314F]/10 rounded-2xl flex items-center justify-center shadow-inner">
+        <svg viewBox="0 0 100 100" className="w-20 h-20 text-[#2E2096]">
           <rect x="25" y="35" width="50" height="40" rx="5" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2"/>
           <rect x="35" y="45" width="30" height="20" rx="3" fill="currentColor" fillOpacity="0.4"/>
           <rect x="30" y="25" width="40" height="15" rx="3" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.5"/>
@@ -423,7 +423,7 @@ export default function CatalogoOfimundoAramark() {
   );
 
   return (
-    <div className="bg-white min-h-screen text-slate-800 font-sans selection:bg-pink-500 selection:text-white">
+    <div className="bg-white min-h-screen text-slate-800 font-sans selection:bg-[#2E2096] selection:text-white">
       
       <nav className="bg-white text-slate-800 sticky top-0 z-30 shadow-md">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-3 flex justify-between items-center">
@@ -431,23 +431,23 @@ export default function CatalogoOfimundoAramark() {
             <img src="/V_PRINCIPAL_OFIMUNDO.png" alt="Logo Ofimundo" className="h-10 md:h-12 w-auto object-contain" />
           </div>
           <div className="flex items-center gap-4">
-            <div className="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-pink-500/10 to-purple-600/10 border border-pink-500/15 px-4 py-1.5 rounded-full text-xs font-bold text-pink-500 uppercase tracking-wider">
+            <div className="hidden sm:inline-flex items-center gap-2 bg-[#2E2096]/10 border border-[#2E2096]/15 px-4 py-1.5 rounded-full text-xs font-bold text-[#2E2096] uppercase tracking-wider">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               Propuesta Corporativa
             </div>
-            <a href="https://www.ofimundo.cl" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-slate-500 hover:text-pink-500 transition-colors">ofimundo.cl</a>
+            <a href="https://www.ofimundo.cl" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-slate-500 hover:text-[#2E2096] transition-colors">ofimundo.cl</a>
           </div>
         </div>
-        <div className="h-1 w-full bg-gradient-to-r from-pink-500 to-purple-600"></div>
+        <div className="h-1 w-full bg-gradient-to-r from-[#2E2096] to-[#E3314F]"></div>
       </nav>
 
       <section className="bg-white py-16 px-6 md:px-12 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-pink-500/5 to-purple-600/5 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-pink-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#2E2096]/5 to-[#E3314F]/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#2E2096]/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center relative z-10">
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500/10 to-purple-600/10 border border-pink-500/10 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest text-pink-500">Aramark Chile</div>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-none text-slate-900">Propuesta Ejecutiva <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">OFIMUNDO</span> para <span className="text-slate-700">Aramark</span></h1>
+            <div className="inline-flex items-center gap-2 bg-[#2E2096]/10 border border-[#2E2096]/10 px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-widest text-[#2E2096]">Aramark Chile</div>
+            <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-none text-slate-900">Propuesta Ejecutiva <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2E2096] to-[#E3314F]">OFIMUNDO</span> para <span className="text-slate-700">Aramark</span></h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">Plataforma integral de impresión administrada (MPS) orientada a la eficiencia operacional, continuidad del servicio, seguridad documental avanzada y el control inteligente de costos.</p>
             <div className="flex flex-wrap gap-2 text-xs">
               <span className="bg-slate-50 border border-slate-200/80 px-3.5 py-2 rounded-xl font-bold text-slate-600">Cliente: Aramark</span>
@@ -455,17 +455,17 @@ export default function CatalogoOfimundoAramark() {
               <span className="bg-slate-50 border border-slate-200/80 px-3.5 py-2 rounded-xl font-bold text-slate-600">Cobertura Nacional</span>
             </div>
             <div className="grid grid-cols-3 gap-4 pt-4">
-              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-pink-500/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">24/7</div><div className="text-xs text-slate-500 font-semibold mt-1">Monitoreo remoto de red</div></div>
-              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-pink-500/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">SLA</div><div className="text-xs text-slate-500 font-semibold mt-1">Soporte corporativo proactivo</div></div>
-              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-pink-500/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Cloud</div><div className="text-xs text-slate-500 font-semibold mt-1">Gestión y auditoría en la nube</div></div>
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">24/7</div><div className="text-xs text-slate-500 font-semibold mt-1">Monitoreo remoto de red</div></div>
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">SLA</div><div className="text-xs text-slate-500 font-semibold mt-1">Soporte corporativo proactivo</div></div>
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Cloud</div><div className="text-xs text-slate-500 font-semibold mt-1">Gestión y auditoría en la nube</div></div>
             </div>
           </div>
           <div className="lg:col-span-5">
             <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-10 shadow-lg relative">
-              <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-2"><Award className="text-pink-500 w-5 h-5" /> Beneficios Clave del Servicio</h2>
+              <h2 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-2"><Award className="text-[#2E2096] w-5 h-5" /> Beneficios Clave del Servicio</h2>
               <div className="space-y-4">
                 {['Reducción y optimización de costos de impresión.','Reposición automatizada y proactiva de consumibles.','Garantía total de continuidad operacional.','Políticas de impresión segura y auditoría centralizada.','Mantenimiento preventivo planificado y soporte correctivo.','Servicio técnico certificado con cobertura a nivel nacional.'].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3 bg-white border border-slate-200/60 hover:border-pink-500/20 rounded-2xl p-4 transition-all duration-200 hover:shadow-sm"><CheckCircle2 className="w-5 h-5 text-pink-500 shrink-0 mt-0.5" /><span className="text-slate-600 text-sm md:text-base leading-relaxed">{item}</span></div>
+                  <div key={idx} className="flex items-start gap-3 bg-white border border-slate-200/60 hover:border-[#2E2096]/20 rounded-2xl p-4 transition-all duration-200 hover:shadow-sm"><CheckCircle2 className="w-5 h-5 text-[#2E2096] shrink-0 mt-0.5" /><span className="text-slate-600 text-sm md:text-base leading-relaxed">{item}</span></div>
                 ))}
               </div>
             </div>
@@ -483,7 +483,7 @@ export default function CatalogoOfimundoAramark() {
           <select
             value={selectedLocation}
             onChange={(e) => setSelectedLocation(e.target.value)}
-            className="bg-white border border-slate-300 rounded-xl px-6 py-3 focus:outline-none focus:ring-2 focus:ring-pink-500 text-base font-medium"
+            className="bg-white border border-slate-300 rounded-xl px-6 py-3 focus:outline-none focus:ring-2 focus:ring-[#2E2096] text-base font-medium"
           >
             <option value="" disabled>📌 Selecciona un sector</option>
             <option value="SANTIAGO">📍 Santiago</option>
@@ -502,7 +502,7 @@ export default function CatalogoOfimundoAramark() {
               </button>
               <button
                 onClick={() => setShowEmailModal(true)}
-                className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-xl font-bold hover:shadow-lg transition-all duration-200 cursor-pointer"
+                className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-[#2E2096] to-[#E3314F] text-white rounded-xl font-bold hover:shadow-lg transition-all duration-200 cursor-pointer"
               >
                 <Send className="w-4 h-4" />
                 Enviar Catálogo
@@ -528,8 +528,8 @@ export default function CatalogoOfimundoAramark() {
             {categories.length > 0 && (
               <div className="flex justify-between items-center flex-wrap gap-4 mb-4">
                 <div className="flex gap-2 bg-slate-100 rounded-xl p-1">
-                  <button onClick={expandAllCategories} className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${expandAll ? `bg-gradient-to-r ${getLocationColor()} text-white shadow-sm` : 'text-slate-600 hover:bg-white hover:text-pink-500'}`}><Maximize2 className="w-4 h-4" /> Expandir Todo</button>
-                  <button onClick={collapseAllCategories} className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${!expandAll ? `bg-gradient-to-r ${getLocationColor()} text-white shadow-sm` : 'text-slate-600 hover:bg-white hover:text-pink-500'}`}><Minimize2 className="w-4 h-4" /> Minimizar Todo</button>
+                  <button onClick={expandAllCategories} className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${expandAll ? `bg-gradient-to-r ${getLocationColor()} text-white shadow-sm` : 'text-slate-600 hover:bg-white hover:text-[#2E2096]'}`}><Maximize2 className="w-4 h-4" /> Expandir Todo</button>
+                  <button onClick={collapseAllCategories} className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${!expandAll ? `bg-gradient-to-r ${getLocationColor()} text-white shadow-sm` : 'text-slate-600 hover:bg-white hover:text-[#2E2096]'}`}><Minimize2 className="w-4 h-4" /> Minimizar Todo</button>
                 </div>
                 
                 {/* Botón de Preferencias de Equipo junto al catálogo */}
@@ -564,7 +564,7 @@ export default function CatalogoOfimundoAramark() {
                           <p className="text-slate-500 text-sm md:text-base mt-2">{category.subtitle}</p>
                         </div>
                         <div className="ml-4">
-                          {isCollapsed ? <ChevronDown className="w-6 h-6 text-pink-500 transition-transform" /> : <ChevronUp className="w-6 h-6 text-pink-500 transition-transform" />}
+                          {isCollapsed ? <ChevronDown className="w-6 h-6 text-[#2E2096] transition-transform" /> : <ChevronUp className="w-6 h-6 text-[#2E2096] transition-transform" />}
                         </div>
                       </div>
                     </div>
@@ -584,9 +584,9 @@ export default function CatalogoOfimundoAramark() {
                               <div className="space-y-3">
                                 <div className="flex items-center gap-2">
                                   <span className="inline-block bg-slate-900 text-white font-bold px-3 py-1 rounded-lg text-[10px] uppercase tracking-wider">{model.volume}</span>
-                                  <span className="inline-block bg-slate-100 border border-slate-200 text-slate-600 font-bold px-2.5 py-1 rounded-lg text-[10px] uppercase tracking-wider flex items-center gap-1"><Zap className="w-3 h-3 text-pink-500" /> {model.ppm}</span>
+                                  <span className="inline-block bg-slate-100 border border-slate-200 text-slate-600 font-bold px-2.5 py-1 rounded-lg text-[10px] uppercase tracking-wider flex items-center gap-1"><Zap className="w-3 h-3 text-[#2E2096]" /> {model.ppm}</span>
                                 </div>
-                                <h4 className="text-xl font-bold tracking-tight text-slate-900 leading-snug group-hover:text-pink-500 transition-colors min-h-[56px] flex items-center">
+                                <h4 className="text-xl font-bold tracking-tight text-slate-900 leading-snug group-hover:text-[#2E2096] transition-colors min-h-[56px] flex items-center">
                                   {model.tipo} {model.formato} - {model.volume}
                                 </h4>
                               </div>
@@ -628,12 +628,12 @@ export default function CatalogoOfimundoAramark() {
               <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-slate-400"><Search className="w-8 h-8" /></div>
               <h3 className="text-xl font-bold text-slate-800">No se encontraron equipos</h3>
               <p className="text-slate-500 max-w-md mx-auto">No hay equipos disponibles para este sector.</p>
-              <button onClick={resetAndChangeSector} className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2.5 rounded-xl font-bold hover:opacity-90 transition-all cursor-pointer">Cambiar Sector</button>
+              <button onClick={resetAndChangeSector} className="bg-gradient-to-r from-[#2E2096] to-[#E3314F] text-white px-6 py-2.5 rounded-xl font-bold hover:opacity-90 transition-all cursor-pointer">Cambiar Sector</button>
             </div>
           )
         ) : (
           <div className="text-center py-20 bg-slate-50 rounded-3xl border border-slate-200">
-            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm"><MapPin className="w-10 h-10 text-pink-500" /></div>
+            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm"><MapPin className="w-10 h-10 text-[#2E2096]" /></div>
             <h2 className="text-2xl font-bold text-slate-900 mb-2">Seleccione un sector para ver el catálogo</h2>
             <p className="text-slate-500">Elija Santiago, Región o Faena para visualizar los equipos disponibles</p>
           </div>
@@ -641,18 +641,18 @@ export default function CatalogoOfimundoAramark() {
       </section>
 
       <section className="max-w-7xl mx-auto py-20 px-6">
-        <div className="bg-gradient-to-br from-pink-500/5 via-white to-purple-600/5 border border-slate-200 rounded-[40px] p-8 md:p-16 shadow-lg relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="bg-gradient-to-br from-[#2E2096]/5 via-white to-[#E3314F]/5 border border-slate-200 rounded-[40px] p-8 md:p-16 shadow-lg relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E3314F]/5 rounded-full blur-3xl pointer-events-none"></div>
           <div className="grid lg:grid-cols-12 gap-12 items-center relative z-10">
             <div className="lg:col-span-6 space-y-6">
-              <div className="uppercase tracking-[4px] text-xs font-bold text-pink-500">EFICIENCIA CORPORATIVA</div>
+              <div className="uppercase tracking-[4px] text-xs font-bold text-[#2E2096]">EFICIENCIA CORPORATIVA</div>
               <h3 className="text-3xl md:text-4xl font-black leading-tight text-slate-900">Una solución moderna diseñada para optimizar toda la operación documental de Aramark</h3>
               <p className="text-slate-600 text-base md:text-lg leading-relaxed">OFIMUNDO integra hardware de nivel empresarial con software de monitoreo de última generación, continuidad del servicio automatizada y un equipo técnico de soporte de primer nivel para brindar una experiencia estable.</p>
             </div>
             <div className="lg:col-span-6 grid sm:grid-cols-2 gap-4">
               {[{ text: 'Reducción drástica de costos operacionales', icon: DollarSign }, { text: 'Consola web de administración centralizada', icon: Cpu }, { text: 'Logística de consumibles 100% automatizada', icon: Clock }, { text: 'Soporte técnico directo especializado', icon: ShieldCheck }, { text: 'Equipamiento robusto de alta durabilidad', icon: Printer }, { text: 'Escalabilidad comercial y cobertura país', icon: Globe }].map((item, idx) => {
                 const IconComponent = item.icon;
-                return (<div key={idx} className="bg-white border border-slate-200 hover:border-pink-500/30 rounded-2xl p-5 transition-all duration-300 flex flex-col justify-between min-h-[120px] shadow-sm hover:shadow-md"><div className="bg-gradient-to-r from-pink-500/10 to-purple-600/10 w-8 h-8 rounded-lg flex items-center justify-center mb-3"><IconComponent className="w-4 h-4 text-pink-500" /></div><div className="font-bold text-slate-800 text-sm leading-snug">{item.text}</div></div>);
+                return (<div key={idx} className="bg-white border border-slate-200 hover:border-[#2E2096]/30 rounded-2xl p-5 transition-all duration-300 flex flex-col justify-between min-h-[120px] shadow-sm hover:shadow-md"><div className="bg-gradient-to-r from-[#2E2096]/10 to-[#E3314F]/10 w-8 h-8 rounded-lg flex items-center justify-center mb-3"><IconComponent className="w-4 h-4 text-[#2E2096]" /></div><div className="font-bold text-slate-800 text-sm leading-snug">{item.text}</div></div>);
               })}
             </div>
           </div>
@@ -662,7 +662,7 @@ export default function CatalogoOfimundoAramark() {
       <footer className="bg-white text-slate-800 py-16 px-6 relative border-t border-slate-200">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
           <div className="space-y-4"><div className="flex items-center"><img src="/V_PRINCIPAL_OFIMUNDO.png" alt="Logo Ofimundo Footer" className="h-10 w-auto object-contain" /></div><div className="text-slate-500 text-sm font-semibold">Soluciones Corporativas de Impresión y Gestión Documental</div></div>
-          <div className="flex flex-col md:items-end gap-2 text-slate-600 text-sm font-bold"><a href="https://www.ofimundo.cl" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition-colors flex items-center gap-1.5"><Globe className="w-4 h-4 text-pink-500" /> www.ofimundo.cl</a><a href="mailto:contacto@ofimundo.cl" className="hover:text-pink-500 transition-colors flex items-center gap-1.5"><Mail className="w-4 h-4 text-pink-500" /> contacto@ofimundo.cl</a><span className="text-slate-400 text-xs font-semibold mt-2">© {new Date().getFullYear()} OFIMUNDO. Todos los derechos reservados.</span></div>
+          <div className="flex flex-col md:items-end gap-2 text-slate-600 text-sm font-bold"><a href="https://www.ofimundo.cl" target="_blank" rel="noopener noreferrer" className="hover:text-[#2E2096] transition-colors flex items-center gap-1.5"><Globe className="w-4 h-4 text-[#2E2096]" /> www.ofimundo.cl</a><a href="mailto:contacto@ofimundo.cl" className="hover:text-[#2E2096] transition-colors flex items-center gap-1.5"><Mail className="w-4 h-4 text-[#2E2096]" /> contacto@ofimundo.cl</a><span className="text-slate-400 text-xs font-semibold mt-2">© {new Date().getFullYear()} OFIMUNDO. Todos los derechos reservados.</span></div>
         </div>
       </footer>
 
@@ -674,7 +674,7 @@ export default function CatalogoOfimundoAramark() {
             
             <div className="bg-white p-6 pb-8 text-center flex flex-col items-center border-b border-slate-200 relative">
               <img src="/V_PRINCIPAL_OFIMUNDO.png" alt="Logo Ofimundo Modal" className="h-9 w-auto object-contain mb-3" />
-              <span className="text-[10px] font-extrabold text-pink-500 uppercase tracking-widest">Enviar Catálogo</span>
+              <span className="text-[10px] font-extrabold text-[#2E2096] uppercase tracking-widest">Enviar Catálogo</span>
             </div>
             
             {emailSent ? (
@@ -700,7 +700,7 @@ export default function CatalogoOfimundoAramark() {
                 </div>
                 
                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex items-center gap-3">
-                  <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-2 rounded-xl">
+                  <div className="bg-gradient-to-r from-[#2E2096] to-[#E3314F] p-2 rounded-xl">
                     <FileText className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -719,14 +719,14 @@ export default function CatalogoOfimundoAramark() {
                     placeholder="ejemplo@dominio.cl"
                     value={emailToSend}
                     onChange={(e) => setEmailToSend(e.target.value)}
-                    className="w-full bg-slate-50 border border-slate-200 focus:border-pink-500 focus:bg-white focus:outline-none rounded-xl p-3.5 text-sm text-slate-700 font-medium placeholder-slate-400 transition-all shadow-xs"
+                    className="w-full bg-slate-50 border border-slate-200 focus:border-[#2E2096] focus:bg-white focus:outline-none rounded-xl p-3.5 text-sm text-slate-700 font-medium placeholder-slate-400 transition-all shadow-xs"
                   />
                 </div>
                 
                 <button
                   type="submit"
                   disabled={emailSending}
-                  className={`w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-2xl py-4 font-bold hover:shadow-lg hover:opacity-95 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer ${emailSending ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`w-full bg-gradient-to-r from-[#2E2096] to-[#E3314F] text-white rounded-2xl py-4 font-bold hover:shadow-lg hover:opacity-95 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer ${emailSending ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {emailSending ? (
                     <>
@@ -754,7 +754,7 @@ export default function CatalogoOfimundoAramark() {
             
             <div className="bg-white p-6 pb-8 text-center flex flex-col items-center border-b border-slate-200 relative">
               <img src="/V_PRINCIPAL_OFIMUNDO.png" alt="Logo Ofimundo Modal" className="h-9 w-auto object-contain mb-3" />
-              <span className="text-[10px] font-extrabold text-pink-500 uppercase tracking-widest">Preferencias de Equipo</span>
+              <span className="text-[10px] font-extrabold text-[#2E2096] uppercase tracking-widest">Preferencias de Equipo</span>
             </div>
             
             {preferencesSent ? (
@@ -781,7 +781,7 @@ export default function CatalogoOfimundoAramark() {
                 
                 {/* Información de contacto */}
                 <div className="bg-slate-50 rounded-2xl p-5 space-y-4">
-                  <h4 className="font-bold text-slate-800 flex items-center gap-2"><Mail className="w-4 h-4 text-pink-500" /> Tus datos</h4>
+                  <h4 className="font-bold text-slate-800 flex items-center gap-2"><Mail className="w-4 h-4 text-[#2E2096]" /> Tus datos</h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-slate-500 font-bold text-[10px] uppercase tracking-wider mb-1.5">Nombre Completo *</label>
@@ -804,7 +804,7 @@ export default function CatalogoOfimundoAramark() {
                 
                 {/* Preferencias del equipo */}
                 <div className="bg-slate-50 rounded-2xl p-5 space-y-4">
-                  <h4 className="font-bold text-slate-800 flex items-center gap-2"><Printer className="w-4 h-4 text-pink-500" /> Especificaciones del equipo</h4>
+                  <h4 className="font-bold text-slate-800 flex items-center gap-2"><Printer className="w-4 h-4 text-[#2E2096]" /> Especificaciones del equipo</h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-slate-500 font-bold text-[10px] uppercase tracking-wider mb-1.5">Tipo de Impresión</label>
@@ -837,13 +837,13 @@ export default function CatalogoOfimundoAramark() {
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-4 pt-2">
-                    <label className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-pink-500 transition-colors">
-                      <input type="checkbox" checked={preferences.wifi} onChange={(e) => setPreferences({...preferences, wifi: e.target.checked})} className="w-4 h-4 text-pink-500 rounded focus:ring-pink-500" />
+                    <label className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-[#2E2096] transition-colors">
+                      <input type="checkbox" checked={preferences.wifi} onChange={(e) => setPreferences({...preferences, wifi: e.target.checked})} className="w-4 h-4 text-[#2E2096] rounded focus:ring-[#2E2096]" />
                       <Wifi className="w-4 h-4 text-slate-500" />
                       <span className="text-sm font-medium text-slate-700">Conectividad WiFi</span>
                     </label>
-                    <label className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-pink-500 transition-colors">
-                      <input type="checkbox" checked={preferences.segundaBandeja} onChange={(e) => setPreferences({...preferences, segundaBandeja: e.target.checked})} className="w-4 h-4 text-pink-500 rounded focus:ring-pink-500" />
+                    <label className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-[#2E2096] transition-colors">
+                      <input type="checkbox" checked={preferences.segundaBandeja} onChange={(e) => setPreferences({...preferences, segundaBandeja: e.target.checked})} className="w-4 h-4 text-[#2E2096] rounded focus:ring-[#2E2096]" />
                       <Layers className="w-4 h-4 text-slate-500" />
                       <span className="text-sm font-medium text-slate-700">Segunda Bandeja de papel</span>
                     </label>
@@ -858,7 +858,7 @@ export default function CatalogoOfimundoAramark() {
                 <button
                   type="submit"
                   disabled={preferencesSending}
-                  className={`w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-2xl py-4 font-bold hover:shadow-lg hover:opacity-95 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer ${preferencesSending ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`w-full bg-gradient-to-r from-[#2E2096] to-[#E3314F] text-white rounded-2xl py-4 font-bold hover:shadow-lg hover:opacity-95 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer ${preferencesSending ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {preferencesSending ? (
                     <>
@@ -882,15 +882,15 @@ export default function CatalogoOfimundoAramark() {
         <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in">
           <div className="bg-white rounded-3xl max-w-md w-full shadow-2xl overflow-hidden border border-slate-200 relative">
             <button onClick={() => setActiveModalModel(null)} className="absolute right-4 top-4 text-slate-500 hover:text-slate-700 bg-slate-100 p-2 rounded-full transition-all cursor-pointer z-10"><X className="w-4 h-4" /></button>
-            <div className="bg-white p-6 pb-8 text-center flex flex-col items-center border-b border-slate-200 relative"><img src="/V_PRINCIPAL_OFIMUNDO.png" alt="Logo Ofimundo Modal" className="h-9 w-auto object-contain mb-3" /><span className="text-[10px] font-extrabold text-pink-500 uppercase tracking-widest">Evaluación Comercial</span></div>
+            <div className="bg-white p-6 pb-8 text-center flex flex-col items-center border-b border-slate-200 relative"><img src="/V_PRINCIPAL_OFIMUNDO.png" alt="Logo Ofimundo Modal" className="h-9 w-auto object-contain mb-3" /><span className="text-[10px] font-extrabold text-[#2E2096] uppercase tracking-widest">Evaluación Comercial</span></div>
             {submittedRequest ? (
               <div className="p-8 text-center space-y-6"><div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto text-emerald-600 animate-bounce"><CheckCircle2 className="w-8 h-8" /></div><div className="space-y-2"><h3 className="text-2xl font-black text-slate-900">¡Solicitud Enviada!</h3><p className="text-slate-500 text-sm">Hemos registrado tu interés en el equipo <br /><strong>{activeModalModel.tipo} {activeModalModel.formato} - {activeModalModel.volume}</strong>.</p></div><div className="text-xs bg-slate-50 border border-slate-200 rounded-xl p-3 text-slate-500 font-semibold">Un consultor comercial de OFIMUNDO se contactará al correo ingresado en breve para presentar la evaluación.</div></div>
             ) : (
               <form onSubmit={handleEvaluationSubmit} className="p-8 space-y-6">
                 <div className="space-y-2"><h3 className="text-2xl font-black text-slate-900 leading-tight">Solicitar Propuesta</h3><p className="text-slate-500 text-xs leading-relaxed font-semibold">Obtén una propuesta de costo-beneficio personalizada para tu sucursal o centro de costos de Aramark.</p></div>
-                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex items-center gap-3"><div className="bg-white border border-slate-200 p-1.5 rounded-xl"><PrinterIcon className="w-12 h-12" /></div><div><h4 className="font-extrabold text-slate-900 text-sm">{activeModalModel.tipo} {activeModalModel.formato} - {activeModalModel.volume}</h4><span className="text-[10px] bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold px-2.5 py-0.5 rounded-md uppercase mt-1 inline-block">{activeModalModel.volume}</span></div></div>
-                <div className="space-y-4"><div><label className="block text-slate-500 font-bold text-[10px] uppercase tracking-wider mb-1.5">Correo Corporativo Aramark</label><input type="email" required placeholder="ejemplo@aramark.cl" value={clientEmail} onChange={(e) => setClientEmail(e.target.value)} className="w-full bg-slate-50 border border-slate-200 focus:border-pink-500 focus:bg-white focus:outline-none rounded-xl p-3.5 text-sm text-slate-700 font-medium placeholder-slate-400 transition-all shadow-xs" /></div><div><label className="block text-slate-500 font-bold text-[10px] uppercase tracking-wider mb-1.5">Centro de Costos / Proyecto (Opcional)</label><input type="text" placeholder="Ej: Sucursal Santiago Centro" className="w-full bg-slate-50 border border-slate-200 focus:border-pink-500 focus:bg-white focus:outline-none rounded-xl p-3.5 text-sm text-slate-700 font-medium placeholder-slate-400 transition-all shadow-xs" /></div></div>
-                <button type="submit" className={`w-full bg-gradient-to-r ${selectedLocation ? getLocationColor() : 'from-pink-500 to-purple-600'} text-white rounded-2xl py-4 font-bold hover:shadow-lg hover:opacity-95 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer`}><TrendingUp className="w-4 h-4" /><span>Generar Solicitud</span></button>
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex items-center gap-3"><div className="bg-white border border-slate-200 p-1.5 rounded-xl"><PrinterIcon className="w-12 h-12" /></div><div><h4 className="font-extrabold text-slate-900 text-sm">{activeModalModel.tipo} {activeModalModel.formato} - {activeModalModel.volume}</h4><span className="text-[10px] bg-gradient-to-r from-[#2E2096] to-[#E3314F] text-white font-bold px-2.5 py-0.5 rounded-md uppercase mt-1 inline-block">{activeModalModel.volume}</span></div></div>
+                <div className="space-y-4"><div><label className="block text-slate-500 font-bold text-[10px] uppercase tracking-wider mb-1.5">Correo Corporativo Aramark</label><input type="email" required placeholder="ejemplo@aramark.cl" value={clientEmail} onChange={(e) => setClientEmail(e.target.value)} className="w-full bg-slate-50 border border-slate-200 focus:border-[#2E2096] focus:bg-white focus:outline-none rounded-xl p-3.5 text-sm text-slate-700 font-medium placeholder-slate-400 transition-all shadow-xs" /></div><div><label className="block text-slate-500 font-bold text-[10px] uppercase tracking-wider mb-1.5">Centro de Costos / Proyecto (Opcional)</label><input type="text" placeholder="Ej: Sucursal Santiago Centro" className="w-full bg-slate-50 border border-slate-200 focus:border-[#2E2096] focus:bg-white focus:outline-none rounded-xl p-3.5 text-sm text-slate-700 font-medium placeholder-slate-400 transition-all shadow-xs" /></div></div>
+                <button type="submit" className={`w-full bg-gradient-to-r ${selectedLocation ? getLocationColor() : 'from-[#2E2096] to-[#E3314F]'} text-white rounded-2xl py-4 font-bold hover:shadow-lg hover:opacity-95 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer`}><TrendingUp className="w-4 h-4" /><span>Generar Solicitud</span></button>
               </form>
             )}
           </div>
