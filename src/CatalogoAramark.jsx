@@ -130,6 +130,7 @@ export default function CatalogoOfimundoAramark() {
     tamaño: '',
     tipoImpresion: '',
     volumen: '',
+    cantidad: '',
     wifi: false,
     segundaBandeja: false,
     nombreCliente: '',
@@ -338,6 +339,7 @@ export default function CatalogoOfimundoAramark() {
               <div class="preference-row"><span class="preference-label">Tamaño/Formato:</span><span class="preference-value">${preferences.tamaño || 'No especificado'}</span></div>
               <div class="preference-row"><span class="preference-label">Color:</span><span class="preference-value">${preferences.color || 'No especificado'}</span></div>
               <div class="preference-row"><span class="preference-label">Volumen Aproximado:</span><span class="preference-value">${preferences.volumen || 'No especificado'}</span></div>
+              <div class="preference-row"><span class="preference-label">Cantidad de Equipos:</span><span class="preference-value">${preferences.cantidad || 'No especificado'}</span></div>
               <div class="preference-row"><span class="preference-label">WiFi / Conectividad:</span><span class="preference-value">${preferences.wifi ? '✅ Sí' : '❌ No'}</span></div>
               <div class="preference-row"><span class="preference-label">Segunda Bandeja:</span><span class="preference-value">${preferences.segundaBandeja ? '✅ Sí' : '❌ No'}</span></div>
             </div>
@@ -375,6 +377,7 @@ export default function CatalogoOfimundoAramark() {
           tamaño: '',
           tipoImpresion: '',
           volumen: '',
+          cantidad: '',
           wifi: false,
           segundaBandeja: false,
           nombreCliente: '',
@@ -404,23 +407,6 @@ export default function CatalogoOfimundoAramark() {
       default: return '';
     }
   };
-
-  const PrinterIcon = ({ className }) => (
-    <div className={`relative ${className}`}>
-      <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#2E2096] rounded-full flex items-center justify-center shadow-lg">
-        <Printer className="w-3 h-3 text-white" />
-      </div>
-      <div className="w-full h-full bg-gradient-to-br from-[#2E2096]/10 to-[#E3314F]/10 rounded-2xl flex items-center justify-center shadow-inner">
-        <svg viewBox="0 0 100 100" className="w-20 h-20 text-[#2E2096]">
-          <rect x="25" y="35" width="50" height="40" rx="5" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2"/>
-          <rect x="35" y="45" width="30" height="20" rx="3" fill="currentColor" fillOpacity="0.4"/>
-          <rect x="30" y="25" width="40" height="15" rx="3" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.5"/>
-          <circle cx="50" cy="55" r="5" fill="white" fillOpacity="0.8"/>
-          <rect x="40" y="65" width="20" height="8" rx="2" fill="currentColor" fillOpacity="0.5"/>
-        </svg>
-      </div>
-    </div>
-  );
 
   return (
     <div className="bg-white min-h-screen text-slate-800 font-sans selection:bg-[#2E2096] selection:text-white">
@@ -455,9 +441,9 @@ export default function CatalogoOfimundoAramark() {
               <span className="bg-slate-50 border border-slate-200/80 px-3.5 py-2 rounded-xl font-bold text-slate-600">Cobertura Nacional</span>
             </div>
             <div className="grid grid-cols-3 gap-4 pt-4">
-              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">24/7</div><div className="text-xs text-slate-500 font-semibold mt-1">Monitoreo remoto de red</div></div>
-              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">SLA</div><div className="text-xs text-slate-500 font-semibold mt-1">Soporte corporativo proactivo</div></div>
-              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Cloud</div><div className="text-xs text-slate-500 font-semibold mt-1">Gestión y auditoría en la nube</div></div>
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Monitoreo</div><div className="text-xs text-slate-500 font-semibold mt-1">Tiempo real </div></div>
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Alertas</div><div className="text-xs text-slate-500 font-semibold mt-1">Sistema Automaticos que activa respuesta inmediata </div></div>
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Insumos</div><div className="text-xs text-slate-500 font-semibold mt-1">Sin quiebres</div></div>
             </div>
           </div>
           <div className="lg:col-span-5">
@@ -532,13 +518,15 @@ export default function CatalogoOfimundoAramark() {
                   <button onClick={collapseAllCategories} className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${!expandAll ? `bg-gradient-to-r ${getLocationColor()} text-white shadow-sm` : 'text-slate-600 hover:bg-white hover:text-[#2E2096]'}`}><Minimize2 className="w-4 h-4" /> Minimizar Todo</button>
                 </div>
                 
-                {/* Botón de Preferencias de Equipo junto al catálogo */}
                 <button
                   onClick={() => setShowPreferencesModal(true)}
-                  className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl font-bold hover:shadow-lg transition-all duration-200 hover:scale-105"
+                  className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl font-bold hover:shadow-lg transition-all duration-200 hover:scale-105 w-full sm:w-auto"
                 >
-                  <Star className="w-4 h-4" />
-                  ¿No encuentras lo que buscas? Preferencias de Equipo
+                  <Star className="w-5 h-5" />
+                  <span className="flex flex-col items-start leading-tight">
+                    <span>¿No encuentras lo que buscas?</span>
+                    <span className="text-[10px] font-medium opacity-90">Cuéntanos tus preferencias</span>
+                  </span>
                 </button>
               </div>
             )}
@@ -554,33 +542,31 @@ export default function CatalogoOfimundoAramark() {
                 
                 return (
                   <div key={category.title} className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
-                    <div onClick={() => toggleCategory(category.categoryKey)} className="cursor-pointer bg-gradient-to-r from-slate-50 to-white p-6 md:p-8 transition-all duration-200 hover:bg-gradient-to-r hover:from-slate-100 hover:to-slate-50">
+                    <div onClick={() => toggleCategory(category.categoryKey)} className="cursor-pointer p-6 md:p-8 transition-all duration-200 hover:bg-slate-50/50 border-b border-slate-200">
                       <div className="flex items-center justify-between">
                         <div className="flex-1">
                           <div className="flex items-center gap-3 flex-wrap">
-                            <h3 className="text-2xl md:text-3xl font-black tracking-tight text-slate-900">{category.title}</h3>
-                            <span className={`inline-flex items-center gap-1 bg-gradient-to-r ${getLocationColor()} text-white px-3 py-1 rounded-full text-xs font-bold`}>{modelCount} {modelCount === 1 ? 'equipo' : 'equipos'}</span>
+                            <h3 className="text-2xl md:text-3xl font-black tracking-tight text-[#2E2096]">{category.title}</h3>
+                            <span className={`inline-flex items-center gap-1 bg-gradient-to-r ${getLocationColor()} text-white px-3 py-1 rounded-full text-xs font-bold shadow-md`}>
+                              {modelCount} {modelCount === 1 ? 'equipo' : 'equipos'}
+                            </span>
                           </div>
                           <p className="text-slate-500 text-sm md:text-base mt-2">{category.subtitle}</p>
                         </div>
                         <div className="ml-4">
-                          {isCollapsed ? <ChevronDown className="w-6 h-6 text-[#2E2096] transition-transform" /> : <ChevronUp className="w-6 h-6 text-[#2E2096] transition-transform" />}
+                          {isCollapsed ? (
+                            <ChevronDown className="w-6 h-6 text-[#2E2096] transition-transform" />
+                          ) : (
+                            <ChevronUp className="w-6 h-6 text-[#2E2096] transition-transform" />
+                          )}
                         </div>
                       </div>
                     </div>
                     {!isCollapsed && (
-                      <div className="p-6 md:p-8 pt-0 border-t border-slate-100">
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+                      <div className="p-6 md:p-8 pt-6">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                           {category.models.map((model, idx) => (
                             <div key={idx} className="group bg-white border border-slate-200/80 rounded-3xl p-6 hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5">
-                              <div>
-                                <div className="bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200/50 rounded-2xl h-52 mb-6 flex flex-col items-center justify-center relative overflow-hidden transition-all group-hover:from-slate-100 group-hover:to-slate-200">
-                                  <PrinterIcon className="w-32 h-32" />
-                                  <div className="absolute top-3 left-3 bg-white/90 shadow-sm border border-slate-200 px-3 py-1 rounded-xl text-[10px] font-bold text-slate-700 uppercase">
-                                    {category.categoryKey === 'MONO_A4' || category.categoryKey === 'MONO_A3' ? 'Monocromático' : 'Color'} {model.formato}
-                                  </div>
-                                </div>
-                              </div>
                               <div className="space-y-3">
                                 <div className="flex items-center gap-2">
                                   <span className="inline-block bg-slate-900 text-white font-bold px-3 py-1 rounded-lg text-[10px] uppercase tracking-wider">{model.volume}</span>
@@ -836,6 +822,18 @@ export default function CatalogoOfimundoAramark() {
                     </div>
                   </div>
                   
+                  <div>
+                    <label className="block text-slate-500 font-bold text-[10px] uppercase tracking-wider mb-1.5">Cantidad de Equipos</label>
+                    <input 
+                      type="number" 
+                      min="1" 
+                      value={preferences.cantidad} 
+                      onChange={(e) => setPreferences({...preferences, cantidad: e.target.value})} 
+                      className="w-full bg-white border border-slate-200 rounded-xl p-3 text-sm" 
+                      placeholder="Ej: 5" 
+                    />
+                  </div>
+                  
                   <div className="grid md:grid-cols-2 gap-4 pt-2">
                     <label className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-200 cursor-pointer hover:border-[#2E2096] transition-colors">
                       <input type="checkbox" checked={preferences.wifi} onChange={(e) => setPreferences({...preferences, wifi: e.target.checked})} className="w-4 h-4 text-[#2E2096] rounded focus:ring-[#2E2096]" />
@@ -888,7 +886,12 @@ export default function CatalogoOfimundoAramark() {
             ) : (
               <form onSubmit={handleEvaluationSubmit} className="p-8 space-y-6">
                 <div className="space-y-2"><h3 className="text-2xl font-black text-slate-900 leading-tight">Solicitar Propuesta</h3><p className="text-slate-500 text-xs leading-relaxed font-semibold">Obtén una propuesta de costo-beneficio personalizada para tu sucursal o centro de costos de Aramark.</p></div>
-                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex items-center gap-3"><div className="bg-white border border-slate-200 p-1.5 rounded-xl"><PrinterIcon className="w-12 h-12" /></div><div><h4 className="font-extrabold text-slate-900 text-sm">{activeModalModel.tipo} {activeModalModel.formato} - {activeModalModel.volume}</h4><span className="text-[10px] bg-gradient-to-r from-[#2E2096] to-[#E3314F] text-white font-bold px-2.5 py-0.5 rounded-md uppercase mt-1 inline-block">{activeModalModel.volume}</span></div></div>
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex items-center gap-3">
+                  <div className="bg-white border border-slate-200 p-1.5 rounded-xl">
+                    <Printer className="w-12 h-12 text-[#2E2096] opacity-60" />
+                  </div>
+                  <div><h4 className="font-extrabold text-slate-900 text-sm">{activeModalModel.tipo} {activeModalModel.formato} - {activeModalModel.volume}</h4><span className="text-[10px] bg-gradient-to-r from-[#2E2096] to-[#E3314F] text-white font-bold px-2.5 py-0.5 rounded-md uppercase mt-1 inline-block">{activeModalModel.volume}</span></div>
+                </div>
                 <div className="space-y-4"><div><label className="block text-slate-500 font-bold text-[10px] uppercase tracking-wider mb-1.5">Correo Corporativo Aramark</label><input type="email" required placeholder="ejemplo@aramark.cl" value={clientEmail} onChange={(e) => setClientEmail(e.target.value)} className="w-full bg-slate-50 border border-slate-200 focus:border-[#2E2096] focus:bg-white focus:outline-none rounded-xl p-3.5 text-sm text-slate-700 font-medium placeholder-slate-400 transition-all shadow-xs" /></div><div><label className="block text-slate-500 font-bold text-[10px] uppercase tracking-wider mb-1.5">Centro de Costos / Proyecto (Opcional)</label><input type="text" placeholder="Ej: Sucursal Santiago Centro" className="w-full bg-slate-50 border border-slate-200 focus:border-[#2E2096] focus:bg-white focus:outline-none rounded-xl p-3.5 text-sm text-slate-700 font-medium placeholder-slate-400 transition-all shadow-xs" /></div></div>
                 <button type="submit" className={`w-full bg-gradient-to-r ${selectedLocation ? getLocationColor() : 'from-[#2E2096] to-[#E3314F]'} text-white rounded-2xl py-4 font-bold hover:shadow-lg hover:opacity-95 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer`}><TrendingUp className="w-4 h-4" /><span>Generar Solicitud</span></button>
               </form>
