@@ -441,8 +441,8 @@ export default function CatalogoOfimundoAramark() {
               <span className="bg-slate-50 border border-slate-200/80 px-3.5 py-2 rounded-xl font-bold text-slate-600">Cobertura Nacional</span>
             </div>
             <div className="grid grid-cols-3 gap-4 pt-4">
-              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Monitoreo</div><div className="text-xs text-slate-500 font-semibold mt-1">Tiempo real </div></div>
-              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Alertas</div><div className="text-xs text-slate-500 font-semibold mt-1">Sistema Automaticos que activa respuesta inmediata </div></div>
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Monitoreo</div><div className="text-xs text-slate-500 font-semibold mt-1">En tiempo real </div></div>
+              <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Alertas</div><div className="text-xs text-slate-500 font-semibold mt-1">Sistema Automáticos que activa respuestas inmediata </div></div>
               <div className="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-sm transition-all duration-300 hover:border-[#2E2096]/30 hover:shadow-md"><div className="text-2xl md:text-3xl font-black text-slate-900 flex items-center gap-1.5">Insumos</div><div className="text-xs text-slate-500 font-semibold mt-1">Sin quiebres</div></div>
             </div>
           </div>
